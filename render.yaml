@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: community-garden-api
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: DATABASE_URL
+        value: ./data/garden.db
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 15m
+      - key: JWT_REFRESH_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGIN
+        value: https://your-frontend-domain.com
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+      - key: MAX_FILE_SIZE
+        value: 5242880
+      - key: UPLOAD_PATH
+        value: ./uploads
+      - key: WEATHER_CACHE_DURATION
+        value: 300000
+      - key: LOG_LEVEL
+        value: info
+    
+    # Disk storage for SQLite database and uploaded files
+    disk:
+      name: community-garden-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
+
+databases: []
+
+# Optional: Add a cron job service for background tasks
+# - type: cron
+#   name: background-jobs
+#   env: node
+#   schedule: "0 2 * * *"  # Daily at 2 AM
+#   buildCommand: npm install
+#   startCommand: node src/scripts/runBackgroundJobs.js
