@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import {
   MapIcon,
   BeakerIcon,
-  DropletIcon,
+  EyeDropperIcon,
   StarIcon,
   ChartBarIcon,
   ClipboardDocumentListIcon,
@@ -82,7 +82,7 @@ const Dashboard = () => {
   const quickActions = [
     {
       name: 'Log Watering',
-      icon: DropletIcon,
+      icon: EyeDropperIcon,
       color: 'bg-blue-500',
       href: '/watering'
     },
@@ -221,7 +221,7 @@ const Dashboard = () => {
           <Card className="p-4">
             <div className="flex items-center space-x-3">
               <div className="p-2 bg-red-100 dark:bg-red-900 rounded-lg">
-                <DropletIcon className="w-6 h-6 text-red-600 dark:text-red-400" />
+                <EyeDropperIcon className="w-6 h-6 text-red-600 dark:text-red-400" />
               </div>
               <div>
                 <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">

@@ -55,6 +55,7 @@ export default defineConfig({
         ]
       },
       workbox: {
+        globDirectory: 'dist',
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
         runtimeCaching: [
           {
@@ -116,9 +117,7 @@ export default defineConfig({
           'react-vendor': ['react', 'react-dom'],
           'router-vendor': ['react-router-dom'],
           'query-vendor': ['@tanstack/react-query'],
-          'chart-vendor': ['chart.js', 'react-chartjs-2'],
-          'map-vendor': ['leaflet', 'react-leaflet'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+          'form-vendor': ['zod']
         }
       }
     }

@@ -1,6 +1,11 @@
-# Community Garden Management System - Backend API
+# Community Garden Management System - Full Stack Application
 
-A comprehensive RESTful API for managing community gardens, built with Express.js and SQLite. This system helps coordinate garden plots, track plant growth, manage watering schedules, and facilitate community collaboration.
+A comprehensive **full-stack web application** for managing community gardens, built with React frontend and Express.js backend. This system helps coordinate garden plots, track plant growth, manage watering schedules, and facilitate community collaboration.
+
+**🏗️ Architecture:**
+- **Frontend**: React + TypeScript + Vite (Port 3000)  
+- **Backend**: Express.js + SQLite (Port 3001)
+- **Database**: SQLite with WAL mode for performance
 
 ## 🌱 Features
 

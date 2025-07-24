@@ -5,7 +5,7 @@ import { ArrowLeftIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 import { z } from 'zod'
 
 import { useForm } from '@hooks/useForm'
-import { authService } from '@services/authService'
+import { authService } from '@services/authService.ts'
 import Button from '@components/UI/Button'
 import Input from '@components/UI/Input'
 import Card from '@components/UI/Card'

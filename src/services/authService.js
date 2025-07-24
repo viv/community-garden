@@ -382,5 +382,3 @@ class AuthService {
 }
 
 module.exports = AuthService;
-module.exports.default = AuthService;
-module.exports.authService = AuthService;
