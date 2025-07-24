@@ -91,7 +91,7 @@ class BackgroundJobService {
       job,
       schedule,
       lastRun: null,
-      nextRun: job.nextDate()
+      nextRun: null // Will be set when job runs
     });
   }
 
@@ -305,9 +305,9 @@ class BackgroundJobService {
     for (const [name, jobInfo] of this.jobs.entries()) {
       jobStatuses[name] = {
         schedule: jobInfo.schedule,
-        running: jobInfo.job.running,
+        running: jobInfo.job.options?.scheduled || false,
         lastRun: jobInfo.lastRun,
-        nextRun: jobInfo.job.nextDate()?.toISOString()
+        nextRun: jobInfo.nextRun
       };
     }
     
