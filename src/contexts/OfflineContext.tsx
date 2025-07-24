@@ -15,7 +15,7 @@ interface OfflineContextType {
   getOfflineActions: () => Promise<OfflineAction[]>
 }
 
-const OfflineContext = createContext<OfflineContextType | undefined>(undefined)
+export const OfflineContext = createContext<OfflineContextType | undefined>(undefined)
 
 export function OfflineProvider({ children }: { children: ReactNode }) {
   const [isOnline, setIsOnline] = useState(navigator.onLine)

@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import toast from 'react-hot-toast'
 
 import { User, AuthToken, LoginCredentials, RegisterData } from '@types/index'
-import { authService } from '@services/authService'
+import { authService } from '@services/authService.ts'
 import { storageService } from '@services/storageService'
 
 interface AuthState {
@@ -32,7 +32,7 @@ interface AuthContextType extends AuthState {
   isTokenExpired: () => boolean
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined)
+export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 const initialState: AuthState = {
   user: null,

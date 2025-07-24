@@ -5,14 +5,14 @@ import {
   HomeIcon,
   MapIcon,
   BeakerIcon,
-  DropletIcon,
+  WrenchScrewdriverIcon,
   ClipboardDocumentListIcon
 } from '@heroicons/react/24/outline'
 import {
   HomeIcon as HomeIconSolid,
   MapIcon as MapIconSolid,
   BeakerIcon as BeakerIconSolid,
-  DropletIcon as DropletIconSolid,
+  WrenchScrewdriverIcon as WrenchScrewdriverIconSolid,
   ClipboardDocumentListIcon as ClipboardDocumentListIconSolid
 } from '@heroicons/react/24/solid'
 
@@ -46,7 +46,7 @@ const navigation: NavItem[] = [
   {
     name: 'Water',
     href: '/watering',
-    icon: DropletIcon,
+    icon: WrenchScrewdriverIcon,
     iconSolid: DropletIconSolid,
     badge: 3
   },

@@ -11,7 +11,7 @@ interface PWAContextType extends PWAInstallation {
   checkForUpdates: () => void
 }
 
-const PWAContext = createContext<PWAContextType | undefined>(undefined)
+export const PWAContext = createContext<PWAContextType | undefined>(undefined)
 
 export function PWAProvider({ children }: { children: ReactNode }) {
   const [canInstall, setCanInstall] = useState(false)

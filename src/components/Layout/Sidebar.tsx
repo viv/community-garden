@@ -5,7 +5,7 @@ import {
   HomeIcon,
   MapIcon,
   BeakerIcon,
-  DropletIcon,
+  WrenchScrewdriverIcon,
   StarIcon,
   ClipboardDocumentListIcon,
   ChartBarIcon,
@@ -17,7 +17,7 @@ import {
   HomeIcon as HomeIconSolid,
   MapIcon as MapIconSolid,
   BeakerIcon as BeakerIconSolid,
-  DropletIcon as DropletIconSolid,
+  WrenchScrewdriverIcon as WrenchScrewdriverIconSolid,
   StarIcon as StarIconSolid,
   ClipboardDocumentListIcon as ClipboardDocumentListIconSolid,
   ChartBarIcon as ChartBarIconSolid,
@@ -68,8 +68,8 @@ const navigation: NavItem[] = [
   {
     name: 'Watering',
     href: '/watering',
-    icon: DropletIcon,
-    iconSolid: DropletIconSolid,
+    icon: WrenchScrewdriverIcon,
+    iconSolid: WrenchScrewdriverIconSolid,
     badge: 3,
     description: 'Watering schedules'
   },
