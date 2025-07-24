@@ -9,7 +9,7 @@ interface Props {
 }
 
 interface State {
-  hasError: bool ean
+  hasError: boolean;
   error?: Error
   errorInfo?: ErrorInfo
 }
